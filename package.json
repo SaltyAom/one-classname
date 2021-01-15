@@ -1,0 +1,44 @@
+{
+    "name": "1-classname",
+    "description": "Generate one digit classname and beyond",
+    "version": "1.0.0",
+    "author": {
+        "name": "saltyaom",
+        "url": "https://github.com/SaltyAom",
+        "email": "saltyaom@gmail.com"
+    },
+    "main": "libs/cjs/index.cjs",
+    "module": "libs/mjs/index.mjs",
+    "esnext": "libs/index.js",
+    "types": "libs/index.ts",
+    "typings": "libs/index.d.ts",
+    "keywords": [
+        "one classname",
+        "css module",
+        "one digit classname",
+        "hash classname"
+    ],
+    "homepage": "https://github.com/saltyaom/one-classname",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/saltyaom/one-classname"
+    },
+    "bugs": "https://github.com/SaltyAom/one-classname/issues",
+    "license": "MIT",
+    "scripts": {
+        "prebuild": "rimraf libs",
+        "build": "tsc && tsc --project tsconfig.mjs.json && tsc --project tsconfig.es5.json",
+        "postbuild": "yarn copy-ts",
+        "test": "jest",
+        "copy-ts": "node builder/index.js",
+        "release": "yarn build && yarn publish"
+    },
+    "devDependencies": {
+        "@types/jest": "^26.0.20",
+        "@types/node": "^14.14.21",
+        "jest": "^26.6.3",
+        "rimraf": "^3.0.2",
+        "ts-jest": "^26.4.4",
+        "typescript": "^4.1.3"
+    }
+}

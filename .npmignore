@@ -1,0 +1,15 @@
+__specs__
+.DS_Store
+.git
+.github
+builder
+node_modules
+src
+.gitignore
+.npmignore
+.prettierrc
+jest.config.js
+jest.tsconfig.json
+tsconfig.es5.json
+tsconfig.mjs.json
+yarn.lock
