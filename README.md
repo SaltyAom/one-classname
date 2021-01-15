@@ -21,7 +21,8 @@ Let's say if average tranditional hash has an average length of 16 and there's a
 By using 1-classname, we reduce byte used by classname alone by 8.75x
 
 Now we 100% unique one digit className and decrease bundle size.
-<img width="300" src="https://media1.tenor.com/images/c3ee30261a7eaf29c6ea0f2fa8e89055/tenor.gif?itemid=18001082" alt="Happy Fox" />
+
+<img width="420" src="https://media1.tenor.com/images/c3ee30261a7eaf29c6ea0f2fa8e89055/tenor.gif?itemid=18001082" alt="Happy Fox" />
 
 ### Note
 Although traditional css classname ensure that className will never be duplicated, using 'one classname' (this module) you have to make sure that className will never be duplicated by yourself.
@@ -106,5 +107,6 @@ setup({
 
 ## Contribution
 All contribution, discussion and PR is welcome.
-If you have any questions, feels free to ask at [issue](https://github.com/saltyaom/1-classname/issues)
+
+If you have any questions, feels free to ask at [issue](https://github.com/saltyaom/one-classname/issues)
 
