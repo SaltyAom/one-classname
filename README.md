@@ -23,18 +23,18 @@ Let's say if average tranditional hash has an average length of 16 and there's a
 ```
 By using 1-classname, we reduce byte used by classname alone by 8.75x
 
-Now we 100% unique one digit className and decrease bundle size.
-
 <img width="420" src="https://media1.tenor.com/images/c3ee30261a7eaf29c6ea0f2fa8e89055/tenor.gif?itemid=18001082" alt="Happy Fox" />
 
 ### Note
 Although traditional css classname ensure that className will never be duplicated, using 'one classname' (this module) you have to make sure that className will never be duplicated by yourself.
 You might wanted to use traditional hash then use one className to shorten it as the following:
 ```typescript
-import hash from 'one-clasname'
+import hash from '1-clasname'
 
 hash(`${getPathAndNameAndClassNameSomehow()}`) // cssmain__anyLocal--YWtkd => a
 ```
+
+Now we 100% unique one digit className and decrease bundle size.
 
 ## One digit hashing
 [One digit](https://dev.to/denisx/reduce-bundle-size-via-one-letter-css-classname-hash-strategy-10g6) is strategy to reduce long hash className to 1 digit only.
