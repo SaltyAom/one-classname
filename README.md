@@ -1,3 +1,5 @@
+![npm](https://img.shields.io/npm/v/1-classname)![npm bundle size](https://img.shields.io/bundlephobia/minzip/1-classname)
+[![forthebadge](https://forthebadge.com/images/badges/contains-cat-gifs.svg)](https://forthebadge.com)[![forthebadge](https://forthebadge.com/images/badges/made-with-typescript.svg)](https://forthebadge.com)
 ## 1-classname
 Generate one digit classname and beyond.
 
