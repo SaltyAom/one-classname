@@ -28,4 +28,6 @@ const generateUniqueStyleHash = (value: string) => {
     return hash
 }
 
+// @ts-ignore
+export = generateUniqueStyleHash
 export default generateUniqueStyleHash
