@@ -1,14 +1,14 @@
 {
     "name": "1-classname",
     "description": "Generate one digit classname and beyond",
-    "version": "1.0.0",
+    "version": "1.1.0",
     "author": {
         "name": "saltyaom",
         "url": "https://github.com/SaltyAom",
         "email": "saltyaom@gmail.com"
     },
-    "main": "libs/cjs/index.cjs",
-    "module": "libs/mjs/index.mjs",
+    "main": "libs/cjs/index.js",
+    "module": "libs/mjs/index.js",
     "esnext": "libs/index.js",
     "types": "libs/index.ts",
     "typings": "libs/index.d.ts",

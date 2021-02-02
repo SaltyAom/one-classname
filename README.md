@@ -92,24 +92,40 @@ npm install 1-classname
 One classname has built-in TypeScript supports which means no `@types/1-classname` is need.
 
 ## Usage
-This library is designed to be used with [twind](https://github.com/tw-in-js/twind) but also work if your library support hashing as the following:
+This library is designed to be used with `localIdentName` of css-loader.
+
+The following code demonstrate how to reduce className of `.module.sass` file.
 ```typescript
-setup({
-    hash: (string) => generateStyleHash(string),
-})
+cssLoaderOptions: {
+    getLocalIdent: (
+        loaderContext,
+        localIdentName,
+        localName,
+        options
+    ) => {
+        const filePath = loaderContext.resourcePath
+        const fileBaseName = basename(filePath)
+
+        if (/\.module\.sass$/.test(fileBaseName)) {
+            const modulePathParts = filePath.split('/')
+
+            const moduleName =
+                modulePathParts[modulePathParts.length - 2]
+
+            return `_${oneClassName(moduleName + localName)}`
+        }
+
+        return localName
+    }
+}
 ```
 
 If you want prefix you can use template literal:
 ```typescript
-import hash from '1-classname'
-
-setup({
-    hash: (string) => `${generatePrefixSomehow()}-${hash(string)}`,
-})
+generateLocalIdentSomehow: (string) => `${generatePrefixSomehow()}-${hash(string)}`,
 ```
 
 ## Contribution
 All contribution, discussion and PR is welcome.
 
 If you have any questions, feels free to ask at [issue](https://github.com/saltyaom/one-classname/issues)
-
